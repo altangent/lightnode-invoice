@@ -71,7 +71,17 @@ describe('decoder', () => {
 
   it('must fail if the signature is invalid');
 
-  it('must skip f field with unknown version');
+  it('must skip f field with unknown version', () => {
+    let input = 'lnbc11pvjluezpp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqdq5xysxxatsyp3k7enxv4jsfqfndpjkcmr0vwkqhkwv54grmkq6r8w4tweqj3d44x66fx42uc6zufkw6ytdus4jxnyrwce5ryjv5hs23l4zcrl2u0vuzzs73eeyugr8gf85gcufgycpmplv60'; // prettier-ignore
+    let result = decoder.decode(input);
+    expect(result.unknownFields[0]).to.deep.equal({
+      type: 9,
+      value: {
+        version: 19,
+        address: Buffer.from('hello'),
+      },
+    });
+  });
   it('must skip p field with length !== 52');
   it('must skip h field with length !== 52');
   it('must skip n field with length !== 53');
