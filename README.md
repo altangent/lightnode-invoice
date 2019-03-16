@@ -3,6 +3,8 @@
 [![CircleCI](https://circleci.com/gh/altangent/lightnode-invoice/tree/master.svg?style=shield)](https://circleci.com/gh/altangent/lightnode-invoice/tree/master)
 [![Coverage Status](https://coveralls.io/repos/github/altangent/lightnode-invoice/badge.svg?branch=master)](https://coveralls.io/github/altangent/lightnode-invoice?branch=master)
 
+__Package has moved to [@lightnode/invoice](https://github.com/altangent/lightnode/tree/master/packages/lightnode-invoice)__
+
 A JavaScript invoice encoding/decoding library for the Bitcoin Lightning Network.
 
 This library intends to be [BOLT #11](https://github.com/lightningnetwork/lightning-rfc/blob/master/11-payment-encoding.md) compliant.
